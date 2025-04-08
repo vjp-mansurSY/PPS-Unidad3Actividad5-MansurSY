@@ -241,11 +241,17 @@ solo se quiere texto sin etiquetas HTML:
 
 `$comment = strip_tags($_POST['comment']);`
 
+![image](https://github.com/user-attachments/assets/12565365-0deb-4dc0-b33f-297d42a56cb0)
+
+
 Elimina etiquetas HTML completamente. Útil si no quieres permitir texto enriquecido (bold, italic, etc.).
 
 Si en cambio si se quiere permitir algunas etiquetas (por ejemplo, \<b\> y \<i\>), se puede hacer:
 
 `$comment = strip_tags($_POST['comment'], '<b><i>');`
+
+![image](https://github.com/user-attachments/assets/a358039b-1d24-4e35-9370-bca44b28e953)
+
 
 **Protección contra ataques CSRF**
 ---
@@ -273,6 +279,10 @@ if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_tok
 die("Error: Token CSRF inválido.");
 }
 ~~~
+
+![image](https://github.com/user-attachments/assets/e8afa76f-990e-48c4-9cce-f6648a448259)
+
+
 Estas modificaciones previenen ataques de falsificación de solicitudes (CSRF).
 Crea el archivo comment4.php con todas las mitigaciones:
 ~~~
@@ -324,6 +334,9 @@ $_SESSION['csrf_token']; ?>">
 </body>
 </html>
 ~~~
+
+![image](https://github.com/user-attachments/assets/653c9cb5-0149-4a98-a85c-e73614a9270b)
+
 
 ---
 ## ENTREGA
